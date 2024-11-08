@@ -1,4 +1,5 @@
 from clock import Clock
 
-clock = Clock(11,15,2)
-clock.run()
+clock = Clock(23,59,59)
+clock.tick()
+print(clock)

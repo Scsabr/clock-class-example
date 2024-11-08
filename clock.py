@@ -2,18 +2,18 @@ import time
 
 class Clock:
 
-    def set_hours(this,h):
-        if 0 > h > 24:
+    def set_hours(this, h):
+        if not (0 <= h < 24):  # Corrected condition
             raise ValueError(f"Invalid value for hours: {h}")
         this.hours = h
 
-    def set_minutes(this,m):
-        if 0 > m > 60:
+    def set_minutes(this, m):
+        if not (0 <= m < 60):  # Corrected condition
             raise ValueError(f"Invalid value for minutes: {m}")
         this.minutes = m
 
-    def set_seconds(this,s):
-        if 0 > s > 60:
+    def set_seconds(this, s):
+        if not (0 <= s < 60):  # Corrected condition
             raise ValueError(f"Invalid value for seconds: {s}")
         this.seconds = s
 
@@ -30,10 +30,10 @@ class Clock:
             this.seconds = 0
             if this.minutes == 59:
                 this.minutes = 0
-                if this.hour == 23:
-                    this.hour == 0
+                if this.hours == 23:
+                    this.hours = 0
                 else:
-                    this.hour += 1
+                    this.hours += 1
             else:
                 this.minutes += 1
         else:
