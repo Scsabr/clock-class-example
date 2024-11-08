@@ -3,17 +3,17 @@ import time
 class Clock:
 
     def set_hours(this, h):
-        if not (0 <= h < 24):  # Corrected condition
+        if not (0 <= h < 24):
             raise ValueError(f"Invalid value for hours: {h}")
         this.hours = h
 
     def set_minutes(this, m):
-        if not (0 <= m < 60):  # Corrected condition
+        if not (0 <= m < 60): 
             raise ValueError(f"Invalid value for minutes: {m}")
         this.minutes = m
 
     def set_seconds(this, s):
-        if not (0 <= s < 60):  # Corrected condition
+        if not (0 <= s < 60):
             raise ValueError(f"Invalid value for seconds: {s}")
         this.seconds = s
 
