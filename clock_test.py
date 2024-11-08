@@ -1,5 +1,6 @@
+# provided by chatGPT
 import unittest
-from clock import Clock  # Assuming your class is in a module named 'clock'
+from clock import Clock
 
 class TestClock(unittest.TestCase):
     
